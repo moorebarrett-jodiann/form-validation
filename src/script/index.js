@@ -33,7 +33,6 @@ function validate () {
   let lastName = select('.last-name').value.trim();
   let age = select('.age').value.trim();
   let email = select('.email').value.trim();
-  let postal = select('.postal-code').value.trim();
 
   let message = '';
   let valid = true;
