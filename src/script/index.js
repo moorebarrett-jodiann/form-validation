@@ -73,7 +73,6 @@ function validate () {
     alert(message);
   } else {
     alert('Form Submitted!');
-    // form.submit();
   }
 }
 
