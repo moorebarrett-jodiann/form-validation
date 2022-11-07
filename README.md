@@ -65,7 +65,7 @@ To validate email in JavaScript, the input type will be ```email```. There is bu
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 ```
 
-##### Basic Form Validation using JavaScript
+#### Basic Form Validation using JavaScript
 
 ``` javascript
 
