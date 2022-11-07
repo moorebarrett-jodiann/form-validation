@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="author" content="Jodi-Ann Barrett"/>
+        <meta name="description" content="Simple Form Validation"/>
+        <meta name="keywords" content="HTML, CSS, SEO, web, web development"/>
+        <link rel="shortcut icon" href="src/images/favicon.png?v=2" type="image/x-icon"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="src/stylesheet/index.css" media="all"/>
+        <script src="src/script/index.js" defer></script>
+        <title>Simple Form Validation</title>
+    </head>
+    <body>
+        <main>
+            <div class="container flexbox">
+                <div class="form-container">
+                    <div class="heading">
+                        <h2>Registration Form</h2>
+                    </div>
+                    <form novalidate>               
+                        <input type="text" class="first-name" placeholder="First Name *" required/>
+                        <input type="text" class="last-name" placeholder="Last Name *" required/>
+                        <input type="text" class="age" placeholder="Age *" required/>
+                        <input type="email" class="email" placeholder="Email (john@email.com) *" required/>     
+                        <input type="text" class="postal-code" placeholder="Postal Code (A#A #A#) *" required/>
+                        <input type="button" class="send" value="Submit"/>               
+                    </form>
+                    <p>Fields with * are required</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
