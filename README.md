@@ -24,7 +24,11 @@ The basic form structure will include a combination of the following input field
 - Radio buttons for making one selection among a group of options
 - Check boxes for selecting or deselecting a single, independent option
 
-Your starter form should look like the snippet below 
+#### The 'required' Attribute
+
+The simplest HTML validation feature is the ```required``` attribute. To make an input mandatory, add this attribute to the form element. When this attribute is set, the form won't submit when the input is empty and you will receive an error message. 
+
+Your starter HTML form should look like the snippet below 
 
 ```html 
 
@@ -32,13 +36,105 @@ Your starter form should look like the snippet below
     <input type="text" class="first-name" placeholder="First Name *" required/>
     <input type="text" class="last-name" placeholder="Last Name *" required/>
     <input type="text" class="age" placeholder="Age *" required/>
-    <input type="email" class="email" placeholder="Email (john@email.com) *" required/>     
-    <input type="text" class="postal-code" placeholder="Postal Code (A#A #A#) *" required/>
+    <input type="email" class="email" placeholder="Email (john@email.com) *" required/> 
     <input type="button" class="send" value="Submit"/>               
 </form>
 ```
 #### Validating the Input
 
+The following notes will guide developers on how to perform simple validation on data entered into an HTML form:
 
+- ##### Validating Strings
+
+To validate strings in JavaScript, you can simply check if the value retrieved is not empty ```!empty()``` or if it contains an appropriate length of characters ```entry.length > 0```.
+
+##### Validating Numbers
+
+To validate numbers in JavaScript, the input type can remain as ```text``` and you will simply check if the value retrieved is a number. This is done by wrapping the value in the ```isInteger()``` static function of the Number constructor. 
+
+``` javascript 
+
+Number.isInteger(entry)
+```
+##### Validating Email
+
+To validate email in JavaScript, the input type will be ```email```. There is built in validation that will verify the email pattern that is entered. However, this native functionality can be further strengthened by adding ```regular expressions``` or ```RegEx``` for pattern matching. This will take care of any special character requirements that the email value needs to meet. 
+
+``` javascript
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+```
+
+##### Basic Form Validation JavaScript Snippet 
+
+``` javascript
+
+const form = select('form');
+const btn = select('.send');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function isValid(input) {
+  if(Number.isInteger(input)) {
+    return true;
+  }
+  return false;
+}
+
+function validate () {
+  let firstName = select('.first-name').value.trim();
+  let lastName = select('.last-name').value.trim();
+  let age = select('.age').value.trim();
+  let email = select('.email').value.trim();
+
+  let message = '';
+  let valid = true;
+  let count = 0;
+
+  if(firstName.length === 0) {
+    message += 'First Name is required\n';
+    valid = false;
+    count++;
+  }
+  
+  if(lastName.length === 0) {
+    message += 'Last Name is required\n';
+    valid = false;
+    count++;
+  }
+  
+  if(age.length === 0) {
+    message += 'Age is required\n';
+    valid = false;
+    count++;
+  } else if(!isValid(Number(age))) {
+    message += 'A valid Age is required\n';
+  }
+
+  if(email.length === 0) {
+    message += 'Email is required\n';
+    valid = false;
+    count++;
+  } else if(!emailRegex.test(email)) {
+    message += 'A valid Email is required\n';
+    valid = false;
+  }
+
+  if(count === 4) {
+    alert('Fields with * are required');
+  } else if (!valid) {
+    alert(message);
+  } else {
+    alert('Form Submitted!');
+  }
+}
+
+```
 
 Click [here](https://moorebarrett-jodiann.github.io/form-validation/) for live DEMO
+
+### References
+
+- [Client-Side Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+- [JavaScript Form Validation](https://www.tutorialspoint.com/javascript/javascript_form_validations.htm#:~:text=Form%20validation%20generally%20performs%20two,form%20and%20check%20for%20data.)
+- [JavaScript Forms](https://www.tutorialspoint.com/javascript/javascript_form_validations.htm#:~:text=Form%20validation%20generally%20performs%20two,form%20and%20check%20for%20data.)
+

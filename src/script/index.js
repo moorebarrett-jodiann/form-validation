@@ -20,10 +20,6 @@ function select(selector, parent = document) {
 const form = select('form');
 const btn = select('.send');
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const postalRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/; // Canada Postal Code
-
-// secondary regex patterns
-// const emailRegex = /^(?=^.{8,}$)[-_A-Za-z0-9]+([_.-][a-zA-Z0-9]+)*@[A-Za-z0-9]+([.-][a-zA-Z0-9]+)*\.[A-Za-z]{2,}$/;
 
 function isValid(input) {
   if(Number.isInteger(input)) {
@@ -69,15 +65,6 @@ function validate () {
     count++;
   } else if(!emailRegex.test(email)) {
     message += 'A valid Email is required\n';
-    valid = false;
-  }
-  
-  if(postal.length === 0) {
-    message += 'Postal Code is required\n';
-    valid = false;
-    count++;
-  } else if(!postalRegex.test(postal)) {
-    message += 'A valid Postal Code is required\n';
     valid = false;
   }
 
