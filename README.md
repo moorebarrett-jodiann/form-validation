@@ -48,7 +48,7 @@ The following notes will guide developers on how to perform simple validation on
 
 To validate strings in JavaScript, you can simply check if the value retrieved is not empty ```!empty()``` or if it contains an appropriate length of characters ```entry.length > 0```.
 
-##### Validating Numbers
+- ##### Validating Numbers
 
 To validate numbers in JavaScript, the input type can remain as ```text``` and you will simply check if the value retrieved is a number. This is done by wrapping the value in the ```isInteger()``` static function of the Number constructor. 
 
@@ -56,7 +56,7 @@ To validate numbers in JavaScript, the input type can remain as ```text``` and y
 
 Number.isInteger(entry)
 ```
-##### Validating Email
+- ##### Validating Email
 
 To validate email in JavaScript, the input type will be ```email```. There is built in validation that will verify the email pattern that is entered. However, this native functionality can be further strengthened by adding ```regular expressions``` or ```RegEx``` for pattern matching. This will take care of any special character requirements that the email value needs to meet. 
 
@@ -65,7 +65,7 @@ To validate email in JavaScript, the input type will be ```email```. There is bu
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 ```
 
-##### Basic Form Validation JavaScript Snippet 
+##### Basic Form Validation using JavaScript
 
 ``` javascript
 
@@ -129,6 +129,16 @@ function validate () {
 }
 
 ```
+
+Data validation is the process of ensuring that user input is clean, correct, and useful.
+
+A typical form validation checklist answers questions such as:
+
+1. Did the user filled in all required fields?
+2. Did the user entered a valid date or email?
+3. Did the user entered text in a numeric field?
+
+Most often, the purpose of data validation is to ensure correct user input.
 
 Click [here](https://moorebarrett-jodiann.github.io/form-validation/) for live DEMO
 
