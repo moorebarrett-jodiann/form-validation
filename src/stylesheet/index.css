@@ -68,7 +68,7 @@ input:not([type="submit"]) {
     height: 45px;
     padding: 0 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
@@ -87,7 +87,7 @@ input[type="button"] {
     font-weight: 600;
     letter-spacing: 0.2px;
     transition: all 0.25s ease-in-out;
-    background-color: #2d4cee;
+    background-color: var(--app-purple);
     color: #fff;
     margin-top: 20px;
     padding: 0 10px;
