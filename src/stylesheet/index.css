@@ -2,18 +2,25 @@
 
 :root {
     --app-dark-bg:#1a1d28;
+    --app-blue-bg:#24346d;
+    --app-light-bg:#e0e0e0;
+    --app-white:rgb(244, 246, 248);
     --app-red:#ff3c57;
     --app-green:#33ab4e;
     --app-purple:#833cff;
     --app-orange:#ff833c;
-    --app-pink:#f85fdc;
     --app-orange-hover:#fe7a2d;
     --app-blue:#3c57ff;
     --app-blue-hover:#364ee6;
+    --app-blue-bg-color: #146ebe;
+    --app-btn-height: 46px;
+    --app-btn-width: 100%;
+    --app-light-text-color: #f4f6f8;
+    --app-dark-text-color: #1c1c1c;
 }
     
 body {
-    background-color: #1c3754;
+    background: var(--app-light-bg) url("../images/black-tech-bg.jpg") center center / cover no-repeat;
 }
 
 .container {
@@ -50,6 +57,7 @@ p {
     text-align: center;
     width: 400px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.07);
     padding: 25px 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     border-radius: 5px;
