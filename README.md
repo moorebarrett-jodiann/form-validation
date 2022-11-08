@@ -134,9 +134,9 @@ Data validation is the process of ensuring that user input is clean, correct, an
 
 A typical form validation checklist answers questions such as:
 
-1. Did the user filled in all required fields?
-2. Did the user entered a valid date or email?
-3. Did the user entered text in a numeric field?
+1. Did the user fill in all required fields?
+2. Did the user enter a valid date or email?
+3. Did the user enter text in a numeric field?
 
 Most often, the purpose of data validation is to ensure correct user input.
 
