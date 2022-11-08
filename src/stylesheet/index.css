@@ -15,6 +15,7 @@
     --app-blue-bg-color: #146ebe;
     --app-btn-height: 46px;
     --app-btn-width: 100%;
+    --app-light-text-color: rgb(244, 246, 248);
     --app-light-text-color: #f4f6f8;
     --app-dark-text-color: #1c1c1c;
 }
@@ -102,5 +103,5 @@ input:focus {
 }
 
 input::placeholder {
-    color: var(--app-light-text-color);
+    color: rgba(244, 246, 248, 0.25);
 }
